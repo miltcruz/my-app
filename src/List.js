@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 function List({ items }) {
 
@@ -9,10 +10,8 @@ function List({ items }) {
     return (
         <ul>
             {items.map(item => (
-               <li
-                key={item.id}
-                onClick={() => setSelectedItem(item)}>
-                   {item.name}
+               <li key={item.id}>
+                  <Link to={`/detail/${item.id}`}>{item.name}</Link>
                </li>
             ))}
         </ul>

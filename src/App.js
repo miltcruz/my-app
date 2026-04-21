@@ -25,6 +25,7 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
       </nav>
+        {loading ? <p>Loading...</p> : null}
       <Routes>
         <Route path="/" element={<List items={items} />} />
         <Route path="/detail/:id" element={<Detail items={items} />} />
